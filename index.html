@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.0-dist/css/bootstrap.css">
+</head>
+<body onload="loadPage()">
+   <div class="container">
+    <div class="d-lg-flex mt-lg-5">
+        <div class="col-lg-7 col-12">
+            <h1>LIST OF BOOKS</h1><hr>
+            <div>
+                <table class="table table-bordered table-sm table-striped bg-dark table-hover hover-bg-success">
+                    <tr>
+                        <th class="text-light ">S/N</th>
+                        <th class="text-light ">Tittle</th>
+                        <th class="text-light ">Author</th>
+                        <th class="text-light ">DateBought</th>
+                        <th class="text-light ">Price</th>
+                        <th class="text-light ">Action Edit</th>
+                        <th class="text-light ">Action Delete</th>
+                    </tr>
+                    <tbody id="display"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-5 col-12 ms-lg-5 bg-danger fw-bold fs-5 pt-3 ps-3 pe-3" style="max-height: 380px;">
+          <h3 class="">Enter new book </h3><hr> 
+          <small class="bg-light text-danger rounded-3 fw-bold" id="ifempty"></small>
+         <input type="text" id="tittle" class="form-control mt-3" placeholder="What is the tittle of the book?">
+         <input type="text" id="author" class="form-control mt-3" placeholder="Who wrote the book?">
+         <input type="date" id="datebought" class="form-control mt-3">
+         <input type="text" id="price" class="form-control mt-3" placeholder="How much do you get the book?">
+         <button class="btn btn-warning col-12 mt-3 mb-5" onclick="saveBook()" id="save">Save Book</button>
+        </div>
+    </div>
+   </div>
+    <script src="book.js"></script>
+</body>
+</html>
